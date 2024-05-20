@@ -5,3 +5,9 @@ body {
     rgb(110, 136, 161) 90.2%
   );
 }
+.weather-today {
+  background-color: whtie;
+  width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+}

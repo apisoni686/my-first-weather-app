@@ -5,47 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ysabeau+SC:wght@1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="weather-today">
-    <h1 class="displayed-city" id="displayed-city">San Francisco</h1>
-    <h2 class="displayed-date" id="displayed-date">Friday, May 17</h2>
-    <!-- <img/> -->
-    <div class="weather-details" id="weather weather-details">
-    <p>
+    <div class="current">
+      <h1 class="displayed-city" id="displayed-city">San Francisco</h1>
+      <h2 class="displayed-date" id="displayed-date">Friday, May 17</h2>
+
+      <div class="details" id="details">
         <div class="displayed-temp" id="displayed-temp">☀️57°F</div>
-   
-        <div class="displayed-humidity" id="displayed-humidity">Humidity: 80%</div>
-   
-        <div class="displayed-windspeed" id="displayed-windspeed">Wind: 7mph</div>
-    </p>
+
+        <div class="displayed-humidity" id="displayed-humidity">
+          Humidity: 80%
+        </div>
+
+        <div class="displayed-windspeed" id="displayed-windspeed">
+          Wind: 7mph
+        </div>
+      </div>
     </div>
-    </div>
+
     <div class="displayed-forecast" id="displayed-forecast">
-        <ul>
-            <li>
-                Saturday 
-            </li>
-            <li>
-                Sunday
-            </li>
-            <li>
-                Monday
-            </li>
-            <li>
-                Tuesday
-            </li>
-            <li>
-                Wednesday
-            </li>
-        </ul>
+      <ul>
+        <li>Sat</li>
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tues</li>
+        <li>Wed</li>
+      </ul>
     </div>
     <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="search" />
+      <input type="search" placeholder="Enter a city..." required />
+      <input type="submit" value="search" />
     </form>
     <footer>
-        This app was coded by Amy Pisoni, is on GitHub, and is hosted on Netlify.
+      This app was coded by Amy Pisoni, is on GitHub, and is hosted on Netlify.
     </footer>
   </body>
 </html>

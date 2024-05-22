@@ -63,3 +63,13 @@ li {
   /* margin: 0 70px 70px; */
   font-size: 30px;
 }
+.emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  color: rgb(66, 97, 131);
+  font-weight: 400;
+}

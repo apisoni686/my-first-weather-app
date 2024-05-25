@@ -44,6 +44,10 @@ body {
   font-size: 70px;
   transform: translateX(130px);
 }
+/* .weather-icon {
+  font-size: 70px;
+  transform: translateX(130px); */
+/* } */
 .displayed-humidity {
   transform: translate(-10px, 100px);
 }

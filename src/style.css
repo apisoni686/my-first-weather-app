@@ -41,18 +41,25 @@ body {
   transform: translate(0px, -185px);
 }
 .displayed-temp {
+  display: inline-block;
   font-size: 70px;
-  transform: translateX(130px);
+  transform: translateX(79px);
 }
-/* .weather-icon {
+.degree {
+  display: inline-block;
   font-size: 70px;
-  transform: translateX(130px); */
-/* } */
+  transform: translateX(79px);
+}
+.weather-icon {
+  display: inline-block;
+  font-size: 70px;
+  transform: translateX(79px);
+}
 .displayed-humidity {
-  transform: translate(-10px, 100px);
+  transform: translate(-50px, 100px);
 }
 .displayed-windspeed {
-  transform: translate(-100px, 125px);
+  transform: translate(-145px, 125px);
 }
 ul {
   list-style: none;

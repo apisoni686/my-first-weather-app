@@ -14,9 +14,10 @@ body {
 
 .current {
   height: 200px;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 30px;
+  padding-top: 40px;
   background: rgb(150, 169, 188);
   border-radius: 10px;
   box-shadow: 20px;
@@ -25,47 +26,48 @@ body {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 350;
-  font-size: 50px;
-  transform: translateX(50px);
+  font-size: 55px;
+  transform: translate(50px, -10px);
 }
 .displayed-date {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 350;
-  font-size: 35px;
-  transform: translate(50px, -10px);
+  font-size: 40px;
+  transform: translate(50px, -33px);
 }
 .details {
   display: flex;
   justify-content: right;
-  transform: translate(0px, -185px);
+  transform: translate(0px, -220px);
 }
 .displayed-temp {
   display: inline-block;
   font-size: 70px;
-  transform: translateX(79px);
+  transform: translateX(180px);
 }
 .degree {
   display: inline-block;
   font-size: 70px;
-  transform: translateX(79px);
+  transform: translateX(180px);
 }
 .weather-icon {
   display: inline-block;
   font-size: 70px;
-  transform: translateX(79px);
+  transform: translateX(175px);
 }
 .displayed-humidity {
-  transform: translate(-50px, 100px);
+  transform: translate(35px, 100px);
+  font-size: 20px;
 }
 .displayed-windspeed {
-  transform: translate(-145px, 125px);
+  transform: translate(-77px, 130px);
+  font-size: 20px;
 }
 ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 0;
@@ -73,7 +75,7 @@ ul {
 li {
   text-transform: uppercase;
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 200;
 }
 .emoji {
@@ -92,7 +94,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 .search-button {

@@ -14,7 +14,7 @@ body {
 
 .current {
   height: 200px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 30px;
   padding-top: 40px;
@@ -34,7 +34,7 @@ body {
   text-transform: uppercase;
   font-weight: 350;
   font-size: 40px;
-  transform: translate(50px, -33px);
+  transform: translate(54px, -33px);
 }
 .details {
   display: flex;
@@ -44,12 +44,11 @@ body {
 .displayed-temp {
   display: inline-block;
   font-size: 70px;
-  transform: translateX(180px);
+  transform: translate(180px, -15px);
 }
 .weather-icon {
-  display: inline-block;
-  font-size: 70px;
-  transform: translateX(175px);
+  font-size: 60px;
+  transform: translate(175px, 10px);
 }
 .displayed-humidity {
   transform: translate(35px, 100px);

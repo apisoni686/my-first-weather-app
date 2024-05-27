@@ -9,9 +9,12 @@ function updateWeather(response) {
   let displayedWindspeed = Math.round(response.data.wind.speed);
   wind.innerHTML = `Wind: ${displayedWindspeed}mph`;
   let humidity = document.querySelector("#displayed-humidity");
-  let displayedHumidity = response.data.temperature.humidity;
-  humidity = `Humidity: ${displayedHumidity}%`;
+  let currentHumidity = response.data.temperature.humidity;
+  humidity.innerHTML = `Humidity: ${currentHumidity}%`;
+  let icon = document.querySelector("#weather-icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon">`;
 }
+
 function searchCity(city) {
   let apiKey = "df01d4d69fab3f5otaf6694bc9e08ea8";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;

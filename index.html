@@ -27,21 +27,15 @@
   </head>
   <body>
     <div class="current">
-      <h1 class="displayed-city" id="displayed-city">San Francisco</h1>
+      <h1 class="displayed-city" id="displayed-city">Today's Weather</h1>
       <h2 class="displayed-date" id="displayed-date">Friday, May 17</h2>
-
       <div class="details" id="details">
         <div class="current-weather">
-          <span class="weather-icon">☀️</span>
-          <span class="displayed-temp" id="displayed-temp">57°F</span>
+          <span class="weather-icon" id="weather-icon"></span>
+          <span class="displayed-temp" id="displayed-temp"></span>
         </div>
-        <div class="displayed-humidity" id="displayed-humidity">
-          Humidity: 80%
-        </div>
-
-        <div class="displayed-windspeed" id="displayed-windspeed">
-          Wind: 7mph
-        </div>
+        <div class="displayed-humidity" id="displayed-humidity"></div>
+        <div class="displayed-windspeed" id="displayed-windspeed"></div>
       </div>
     </div>
 
@@ -65,7 +59,7 @@
         </li>
         <li>
           Wed
-          <div class="emoji">☀️</div>
+          <div class="emoji" id="emoji">☀️</div>
         </li>
       </ul>
     </div>

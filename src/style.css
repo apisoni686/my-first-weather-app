@@ -46,11 +46,6 @@ body {
   font-size: 70px;
   transform: translateX(180px);
 }
-.degree {
-  display: inline-block;
-  font-size: 70px;
-  transform: translateX(180px);
-}
 .weather-icon {
   display: inline-block;
   font-size: 70px;

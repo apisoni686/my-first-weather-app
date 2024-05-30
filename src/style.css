@@ -11,71 +11,62 @@ body {
   font-weight: 200;
   font-style: normal;
 }
-
 .current {
-  height: 200px;
-  max-width: 900px;
+  height: 300px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 30px;
   padding-top: 40px;
-  background: rgb(150, 169, 188);
+  background: rgb(145, 161, 178);
   border-radius: 10px;
-  box-shadow: 20px;
+  box-shadow: 40px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.location {
+  display: flex;
+  justify-content: left;
 }
 .displayed-city {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 350;
-  font-size: 55px;
-  transform: translate(50px, -10px);
+  font-size: 50px;
 }
 .displayed-date {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 350;
-  font-size: 40px;
-  transform: translate(54px, -33px);
-}
-.details {
-  display: flex;
-  justify-content: right;
-  transform: translate(0px, -220px);
+  font-weight: 250;
+  font-size: 25px;
 }
 .displayed-temp {
   display: inline-block;
-  font-size: 70px;
-  transform: translate(180px, -15px);
+  font-size: 60px;
+  transform: translate(0, -20px);
 }
 .weather-icon {
   font-size: 60px;
-  transform: translate(175px, 10px);
 }
 .displayed-humidity {
-  transform: translate(35px, 100px);
   font-size: 20px;
+  display: flex;
+  justify-content: right;
+  align-content: flex-start;
 }
 .displayed-windspeed {
-  transform: translate(-77px, 130px);
   font-size: 20px;
-}
-ul {
-  list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 0;
+  justify-content: right;
 }
-li {
-  text-transform: uppercase;
-  display: inline-block;
-  font-size: 30px;
-  font-weight: 200;
-}
-.emoji {
+
+.weather-forecast {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-content: space-between;
+
+  text-align: center;
 }
 .search-bar {
   height: 30px;

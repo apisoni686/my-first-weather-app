@@ -29,28 +29,20 @@ function searchWeather(event) {
 }
 
 function formatDate() {
-  let daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let months = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   let currentDate = new Date();
@@ -68,9 +60,34 @@ function formatDate() {
   return formattedDate;
 }
 
-console.log(formatDate());
+function displayForecast() {
+  let days = [`Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+  let forecastHtml = "";
 
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="row">
+        <div class="col-2">
+          <div class=weather-forecast-date>${day} </div>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+            alt=""
+            width="50"
+            class="image"
+          />
+       <div class="temp-range">
+          <span class ="max">18</span>   <span class ="min">12</span>
+        </div>
+        </div>`;
+  });
+
+  let forecast = document.querySelector("#displayed-forecast");
+  forecast.innerHTML = forecastHtml;
+}
 let date = document.querySelector("#displayed-date");
-date.innerHTML = formatDate();
+date.innerHTML = `Last updated: ${formatDate()}`;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
+
+displayForecast();

@@ -27,41 +27,27 @@
   </head>
   <body>
     <div class="current">
-      <h1 class="displayed-city" id="displayed-city">Today's Weather</h1>
-      <h2 class="displayed-date" id="displayed-date">Friday, May 17</h2>
-      <div class="details" id="details">
-        <div class="current-weather">
-          <span class="weather-icon" id="weather-icon"></span>
-          <span class="displayed-temp" id="displayed-temp"></span>
+      <div class="top">
+        <div class.location>
+          <h1 class="displayed-city" id="displayed-city">Today's Weather</h1>
+          <h2 class="displayed-date" id="displayed-date">Friday, May 17</h2>
         </div>
-        <div class="displayed-humidity" id="displayed-humidity"></div>
-        <div class="displayed-windspeed" id="displayed-windspeed"></div>
-      </div>
-    </div>
+        <div class="current-weather">
+          <span class="weather-icon" id="weather-icon">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+          /></span>
+          <span class="displayed-temp" id="displayed-temp">57°F</span>
 
-    <div class="displayed-forecast" id="displayed-forecast">
-      <ul>
-        <li>
-          Sat
-          <div class="emoji">🌤️</div>
-        </li>
-        <li>
-          Sun
-          <div class="emoji">🌤️</div>
-        </li>
-        <li>
-          Mon
-          <div class="emoji">🌧️</div>
-        </li>
-        <li>
-          Tues
-          <div class="emoji">☁️</div>
-        </li>
-        <li>
-          Wed
-          <div class="emoji" id="emoji">☀️</div>
-        </li>
-      </ul>
+          <div class="displayed-humidity" id="displayed-humidity">
+            Humidity: 60%
+          </div>
+          <div class="displayed-windspeed" id="displayed-windspeed">
+            Windspeed: 10mph
+          </div>
+        </div>
+      </div>
+      <div class="displayed-forecast" id="displayed-forecast"></div>
     </div>
     <form class="search-form" id="search-form">
       <input

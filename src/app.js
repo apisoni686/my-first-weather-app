@@ -13,6 +13,7 @@ function updateWeather(response) {
   humidity.innerHTML = `Humidity: ${currentHumidity}%`;
   let icon = document.querySelector("#weather-icon");
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon">`;
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -60,26 +61,43 @@ function formatDate() {
   return formattedDate;
 }
 
-function displayForecast() {
-  let days = [`Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "df01d4d69fab3f5otaf6694bc9e08ea8";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="row">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="row">
         <div class="col-2">
-          <div class=weather-forecast-date>${day} </div>
+          <div class=weather-forecast-date>${formatDay(day.time)}</div>
           <img
-            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
-            alt=""
+            src="${day.condition.icon_url}"
             width="50"
             class="image"
           />
        <div class="temp-range">
-          <span class ="max">18</span>   <span class ="min">12</span>
+          <span class ="max">${Math.round(
+            day.temperature.maximum
+          )}</span>   <span class ="min">${Math.round(
+          day.temperature.minimum
+        )}</span>
         </div>
         </div>`;
+    }
   });
 
   let forecast = document.querySelector("#displayed-forecast");
@@ -89,5 +107,4 @@ let date = document.querySelector("#displayed-date");
 date.innerHTML = `Last updated: ${formatDate()}`;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
-
-displayForecast();
+searchCity("San Francisco");

@@ -77,10 +77,13 @@ body {
 }
 .max {
   font-weight: 500;
+  margin-right: 5px;
 }
 .min {
   font-weight: 100;
+  margin-left: 5px;
 }
+
 .search-bar {
   height: 30px;
   width: 200px;

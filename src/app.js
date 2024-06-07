@@ -90,11 +90,11 @@ function displayForecast(response) {
             class="image"
           />
        <div class="temp-range">
-          <span class ="max">${Math.round(
-            day.temperature.maximum
-          )}</span>   <span class ="min">${Math.round(
-          day.temperature.minimum
-        )}</span>
+          <span class ="max">${
+            Math.round(day.temperature.maximum) + "°"
+          }</span><span class ="min">${
+          Math.round(day.temperature.minimum) + "°"
+        }</span>
         </div>
         </div>`;
     }
